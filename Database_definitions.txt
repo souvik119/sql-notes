@@ -1,0 +1,52 @@
+- What is a Database:
+
+    Any collection of related information
+    Example:
+    Phone book
+    Shopping list
+    Todo list
+    Your 5 best friends
+    Facebook's User Base
+
+    Databases can be stored in different ways:
+    * On paper
+    * In your mind
+    * On a computer
+    * This text file
+    * Comments section of a video
+
+    Computers are great at keeping track of large amounts of information
+    Computers + Databases = <3
+    Case study - Amazon.com vs Shopping list scribbled on paper (or in the mind)
+
+    Amazon.com:
+    * Keeps track of prodcuts, Purchase orders, Credit cards, Users, Media...
+    * Trillions of pieces of info needs to be stored and readily available
+    * Info is extremely valuable
+    * Security is essential as personal info isstored like credit card #, address..
+    * Info is stored on Computer
+
+    Shopping list:
+    * Keeps track of products that need to be purchased
+    * 10-20 pieces of info needed to be stored and readily available
+    * Info is for convienece sake only and not necessary
+    * Security is not important
+    * Info is stored on piece of paper or in mind
+
+
+- Database Management System (DBMS):
+
+    A special software that helps users create and maintain a database. Features:
+    - Makes it easy to manage large amounts of data
+    - Handles Security
+    - Backups
+    - Importing/Exporting data
+    - Concurrency : multiple operations at the same time
+    - Interacts with software applications like programming languages : example amazon.com will interact with DBMS
+
+
+- CRUD:
+
+    Create Read Update Delete
+    4 major operations on a database
+    

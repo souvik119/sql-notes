@@ -1,2 +1,4 @@
 # sql-notes
-Notes for sql basics
+This repo is my follow along for the following youtube video:
+
+https://youtu.be/HXV3zeQKqGY
