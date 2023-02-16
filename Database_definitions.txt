@@ -49,4 +49,37 @@
 
     Create Read Update Delete
     4 major operations on a database
+
+
+- Types of Databases:
+
+    * Relational Databases (SQL)
+    - Organize data into one or more tables
+    - Each table has columns and rows
+    - Unique key identifies each row
+
+    * Non Relational (noSQL/not just SQL)
+    - Organize data in anything but a traditional table
+    - Key - Value stores
+    - Documents (JSON, XML..)
+    - Graphs
     
+
+- Relational Databases (SQL):
+
+    - Relational Database Management Systems (RDBMS)
+        - Helps users create and maintain a relational database
+            * mySQL, Oracle, postgreSQL, mariaDB...
+    
+    - Structured Query Language (SQL)
+        - Standardized language for interacting with RDBMS
+        - Used to perform CRUD operations and other admin tasks (user mgmt, security..)
+        - Used to define tables and structures
+        - SQL code used on one RDBMS not always portable to another without modification
+
+
+- Database Queries:
+
+    Requests made to database for specific info
+    As the db structure becomes more complex it becomes more difficult to get specific info
+    Example - google search is a query
