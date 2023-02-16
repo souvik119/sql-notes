@@ -1,0 +1,45 @@
+- Table structure:
+
+    All tables are made up of rows and columns
+    1 column - single attribute
+    1 row - an entry
+    1 special coulmn - primary key that uniquely identifies each row in the table
+
+    student id      name       major
+       1            Kate       Sociology
+       2            Jack       Biology
+       3            Claire     English
+       4            Jack       Biology
+       5            Mike       Comp Sci
+
+    If there is no primary key then no way to differentiate between the 2 Jacks with Biology major
+
+
+- Surrogate key:
+
+    if primary key is randomly generated and has no relationship to any real world data
+    example - emp id of an employee table
+
+
+- Natural key:
+
+    if primary key value is any real world data itself example employee ssn in employee table
+
+
+- Foriegn key:
+
+    stores the primary key of a row in another database table
+    example branch_id column in an employee table
+    branch id is primary key in Branch table
+    A way to define relationship between 2 tables
+    A table can have multiple foreign keys
+    Foreign key can refer to the same table also
+
+
+- Composite key:
+
+    Primary key is made up of 2 columns 
+    Example - combination of branch_id + supplier_name in Branch supplier table
+    Each of the 2 columns by thmeselves cannot uniquely id the rows
+    Can be 2 foreign keys combining to make a primary key
+
