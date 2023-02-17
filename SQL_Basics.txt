@@ -1,0 +1,24 @@
+- SQL is a hybrid language:
+
+    Its basically 4 types of languages in one
+    - Data Query Language
+        * Used to query database for info
+        * Get info that is already stored
+    - Data Definition Language
+        * Used for defining database schemas
+    - Data Control Language
+        * Used for controlling access to data in database
+        * User and permission management
+    - Data Manipulation Language
+        * Used for inserting, updating and deleting data from database
+
+
+- Queries:
+
+    Query is a set of instructions to RDBMS that tells it what info you want to retrieve
+    - Tons of data in a database
+    - Often hidden in a complex schema
+    - Goal is to only get the data you need
+    - Example : SELECT employee.name, employee.age FROM employee WHERE employee.salary > 30000
+
+
