@@ -1,0 +1,48 @@
+- Basic datatypes:
+
+    INT - whole numbers
+    DECIMAL (M,N) - decimal numbers exact value (M - total no of digits, N - no of digits after decimal)
+    VARCHAR(l) - string of text of length l
+    BLOB - binary large objeect , stores large data (images, files..)
+    DATE - 'YYYY-MM-DD'
+    TIMESTAMP - 'YYYY-MM-DD HH:MM:SS' - used for recording specific time
+
+
+- Create table keyword:
+
+    CRAETE TABLE <name> ();
+
+    example:
+    CREATE TABLE student (
+        student_id INT PRIMARY KEY,
+        name VARCHAR(20),
+        major VARCHAR(20)
+    );
+
+    Another way of defining primary key
+
+    CREATE TABLE student (
+        student_id INT,
+        name VARCHAR(20),
+        major VARCHAR(20),
+        PRIMARY KEY(student_id)
+    );
+
+
+- View table details:
+
+    DESCRIBE <name>;
+    DESCRIBE student;
+
+
+- Delete a table:
+
+    DROP TABLE <name>;
+    DROP TABLE student;
+
+
+- Modify the table:
+
+    ALTER TABLE <name> ADD <column name> <datatype>;
+    ALTER TABLE <name> DROP COLUMN <name>;
+    ALTER TABLE student ADD gpa DECIMAL(3,2);
