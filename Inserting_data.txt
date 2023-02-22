@@ -1,0 +1,59 @@
+- Insert command:
+
+    INSERT INTO <name> VALUES();
+    example:
+    INSERT INTO student VALUES(1, 'Jack', 'Biology');
+    INSERT INTO student VALUES(2, 'Kate', 'Sociology');
+
+    If for example we have to leave the major blank for a student:
+    INSERT INTO student(student_id, name) VALUES(3, 'Claire');
+    This will result in record creation of:
+    3 Claire NULL
+
+    Completing other rows of the table:
+    INSERT INTO student VALUES(4, 'Jack', 'Biology');
+    INSERT INTO student VALUES(5, 'Mike', 'Computer Science');
+
+
+- Constraints:
+
+    NOT NULL
+    Column cannot have NULL VALUES
+    example:
+    CREATE TABLE student (
+        student_id INT,
+        name VARCHAR(20) NOT NULL,
+        major VARCHAR(20),
+        PRIMARY KEY(student_id)
+    );
+
+
+    UNIQUE
+    Column should have unique data entries
+    example:
+    CREATE TABLE student (
+        student_id INT,
+        name VARCHAR(20) NOT NULL,
+        major VARCHAR(20) UNIQUE,
+        PRIMARY KEY(student_id)
+    );
+
+
+    DEFAULT '<value>'
+    CREATE TABLE student (
+        student_id INT,
+        name VARCHAR(20) NOT NULL,
+        major VARCHAR(20) DEFAULT 'undecided',
+        PRIMARY KEY(student_id)
+    );
+
+
+    AUTO_INCREMENT
+    Useful for primary keys or any other field to populate automatically -start from 1
+    example:
+    CREATE TABLE student (
+        student_id INT AUTO_INCREMENT,
+        name VARCHAR(20) NOT NULL,
+        major VARCHAR(20) UNIQUE,
+        PRIMARY KEY(student_id)
+    );
