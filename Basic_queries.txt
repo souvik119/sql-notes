@@ -1,0 +1,33 @@
+- SELECT keyword:
+
+    SELECT <rows> FROM <table name> WHERE <condition>;
+    example:
+    SELECT * FROM student;
+    //select specific columns
+    SELECT name FROM student;
+    SELECT name, major FROM student;
+    //could also specify column names like following
+    SELECT student.name, student.major FROM student;
+    //order the info
+    SELECT student.name, student.major FROM student ORDER BY student.name; // in this case records displayed in alphabetical order of name
+    SELECT student.name, student.major FROM student ORDER BY student.name DESC; //descending order by name
+    //even order by attribute which is not displayed
+    SELECT student.name, student.major FROM student ORDER BY student.student_id DESC;
+    //order by multiple column names
+    SELECT * FROM student ORDER BY major, student_id; // here first order by major and if anything has same major then order by student_id
+    //LIMIT
+    SELECT * FROM student LIMIT 2; //only return 2 rows
+
+
+- WHERE clause:
+
+    SELECT <rows> FROM <table name> WHERE <condition>;
+    example:
+    SELECT * FROM student WHERE major = 'Chemistry';
+    SELECT name, major FROM student WHERE major = 'Chemistry' OR name = 'Kate';
+    -- operators to be used with WHERE 
+    -- <, >, <=, >=, =, <>, AND, OR
+    SELECT name, major FROM student WHERE major <> 'Chemistry';
+    SELECT * FROM student WHERE student_id <= 3 AND name <> 'Jack';
+    //IN keyword
+    SELECT * FROM student WHERE name IN ('Claire', 'Kate', 'Mike');
