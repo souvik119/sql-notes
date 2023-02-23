@@ -1,0 +1,46 @@
+- Employee table:
+
+    Captures employee details
+    emp_id - Primary key
+    first_name
+    last_name
+    birth_date
+    sex
+    salary
+    super_id - Foreign key (supervisor id point to another employee in the employee table)
+    branch_id - Foreign key (from the branch table)
+
+
+- Branch table:
+
+    Captures branch details
+    branch_id - Primary key
+    branch_name
+    mgr_id - Foreign key (points to one of the employees in the employee table)
+    mgr_start_date
+
+
+- Client table:
+
+    Captures client details
+    client_id - Primary key
+    client_name
+    branch_id - Foreign key (from the Branch table)
+
+
+- Branch Supplier table:
+
+    Captures details of suppliers for each branch
+    branch_id
+    supplier_name 
+    //combination of above 2 columns is Primary Key (Composite key)
+    supply_type
+
+
+- Works_with table:
+
+    Captures relationship between employee and client
+    emp_id
+    client_id
+    //combination of above 2 columns is Primary Key (Composite key)
+    total_sales
