@@ -1,0 +1,15 @@
+- Find any clients who are an LLC
+
+    SELECT * FROM client WHERE client_name LIKE '%LLC'; --% IS ANY NO OF CHARACTERS
+
+- Find any branch suppliers who are in the label business
+
+    SELECT * FROM branch_supplier WHERE supplier_name LIKE '%Label%';
+
+- Find any employee born in October
+
+    SELECT * FROM employee WHERE birth_date LIKE '____-10%'; --_ IS 1 CHARACTER
+
+- Find any clients who are schools
+
+    SELECT * FROM client WHERE client_name LIKE '%school%';
