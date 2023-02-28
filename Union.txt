@@ -1,0 +1,38 @@
+- Definition:
+
+    Special SQL operator which we can use to combine results of multiple select statements into one
+    1st rule - have to have same # of columns that you are getting in each select statement
+    2nd rule - also have to have similar data type
+
+
+- Find a list of employee and branch names
+
+    SELECT first_name FROM employee;
+    SELECT branch_name FROM branch;
+    - combine the two
+    SELECT first_name FROM employee
+    UNION
+    SELECT branch_name FROM branch;
+
+
+- Find a list of employee, client and branch names
+
+    SELECT first_name FROM employee
+    UNION
+    SELECT branch_name FROM branch
+    UNION
+    SELECT client_name FROM client;
+
+
+- Find a list of all clients and branch suppliers' names
+
+    SELECT client_name, branch_id FROM client
+    UNION
+    SELECT supplier_name. branch_id FROM branch_supplier;
+
+
+- Find a list of all money spent or earned by the company
+
+    SELECT salary FROM employee
+    UNION
+    SELECT total_sales FROM works_with;
