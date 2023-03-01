@@ -1,0 +1,34 @@
+- Definition
+
+    Used to combine rows from 2 or more tables based on a related column between them
+    4 basic types of joins:
+    - INNER JOIN (NORMAL JOIN)
+    - LEFT JOIN
+    - RIGHT JOIN
+    - FULL OUTER JOIN (COMBINATION OF BOTH LEFT AND RIGHT JOIN) this is not avaiable on mysql. In this case it will list all employees and branches
+
+- Find all branches and the names of their managers
+
+    SELECT employee.emp_id, employee.first_name, branch.branch_name
+    FROM employee
+    JOIN branch
+    ON employee.emp_id = branch.mgr_id;
+
+- Find all branches and the names of their managers (left join this time)
+
+    SELECT employee.emp_id, employee.first_name, branch.branch_name
+    FROM employee
+    LEFT JOIN branch
+    ON employee.emp_id = branch.mgr_id;
+
+    All employees got listed not just the ones who were managers. Left join lists all rows from left table (FROM statement)
+
+- Find all branches and the names of their managers (right join this time)
+
+    SELECT employee.emp_id, employee.first_name, branch.branch_name
+    FROM employee
+    RIGHT JOIN branch
+    ON employee.emp_id = branch.mgr_id;
+
+    All branches got listed. Right join lists all rows from right table (JOIN statement)
+
