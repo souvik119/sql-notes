@@ -1,0 +1,39 @@
+- Example:
+
+    CREATE TABLE branch (
+        branch_id INT PRIMARY KEY,
+        branch_name VARCHAR(40),
+        mgr_id INT,
+        mgr_start_date DATE,
+        FOREIGN KEY(mgr_id) REFERENCES employee(emp_id) ON DELETE SET NULL
+    );
+
+    Imagine if in employee table one of the records is deleted, what will happen. 
+    In this case it will set it NULL in branch table
+
+    DELETE FROM employee
+    WHERE emp_id = 102;
+
+    In this case mgr_id wil be set to NULL where previously it was set to 102
+
+- Options
+
+    ON DELETE SET NULL
+    ON DELETE CASCADE
+
+    CREATE TABLE branch_supplier (
+        branch_id INT,
+        supplier_name VARCHAR(40),
+        supply_type VARCHAR(40),
+        PRIMARY KEY(branch_id, supplier name),
+        FOREIGN KEY(branch_id) REFERENCES branch(branch_id) ON DELETE CASCADE
+    );
+
+    If a particular branch id gets deleted in branch table the whole row will be deleted in branch_supplier table
+
+    DELETE FROM branch
+    WHERE branch_id = 2;
+
+    If FOREIGN KEY part of PRIMARY KEY then cannot set it to NULL so ON DELETE CASCADE
+    If FOREIGN KEY not part of PRIMARY KEY then can set it to NULL so ON DELETE SET NULL
+    
