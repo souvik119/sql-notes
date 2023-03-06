@@ -1,0 +1,52 @@
+- Definition:
+
+    A block of SQL code that defines a certain action when a certain operation is performed on a database. Example - do something whenever an entry is added to table.
+    
+    CREATE TABLE trigger_test (
+        message VARCHAR(100)
+    );
+
+
+- Trigger example:
+
+    use <database name>
+    use souvik
+
+    DELIMITER $$   -- this will change mysql delimiter, normally it is ;
+    CREATE
+        TRIGGER my_trigger BEFORE INSERT
+        ON employee
+        FOR EACH ROW BEGIN
+            INSERT INTO trigger_test VALUES('added new employee');
+        END$$
+    DELIMITER;
+
+
+    DELIMITER $$   -- this will change mysql delimiter, normally it is ;
+    CREATE
+        TRIGGER my_trigger BEFORE INSERT
+        ON employee
+        FOR EACH ROW BEGIN
+            INSERT INTO trigger_test VALUES(NEW.first_name); -- NEW is the record being inserted
+        END$$
+    DELIMITER;
+
+
+    DELIMITER $$   -- this will change mysql delimiter, normally it is ;
+    CREATE
+        TRIGGER my_trigger BEFORE INSERT
+        ON employee
+        FOR EACH ROW BEGIN
+            IF NEW.sex = 'M' then
+                INSERT INTO trigger_test VALUES('added male employee');
+            ELSEIF NEW.sex = 'F' then
+                INSERT INTO trigger_test VALUES('added female employee');
+            ELSE
+                INSERT INTO trigger_test VALUES('added other employee');
+        END$$
+    DELIMITER;
+
+
+    TRIGGER <name> BEFORE/AFTER INSERT/DELETE/UPDATE;
+
+    DROP TRIGGER <name>;
