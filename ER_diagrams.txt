@@ -1,0 +1,30 @@
+- Intro to ER diagrams:
+
+    ER - Entity relationship
+    Entity - An object we want to model and store info about
+    Schema - all the different tables and attributes (columns) associated with those tables
+    ER diagrams are great way to convert business requirements to actual DB schema
+    
+    Entity - in rectangles
+    Atrributes - in ovals
+    Primary Key - in oval (underline)
+    Composite Attribute - can be broken down into sub-attributes eg name -> first_name, last_name
+    Multi-valued Attribute - can have multiple values (depicted with extra border in oval) eg clubs (could be more than 1 per student)
+    Derived Attribute - can be derived from other attributes. depicted by oval with ---- border eg has_honors (derived from gpa)
+    Multiple Entities - can define more than 1 entity in the diagram eg student, class
+    Relationships - defines how 2 entities are related (diamond shape)
+    Total Participation - All members must participate in the relationship eg all clases must be taken by students
+    Partial Participation - not all memebers participate in the relationship eg not all students must take the class
+    Relationship Attribute - eg student takes a class and gets a Grade so Grade is relationship attribute
+    Relationship Cardinality - number of instances f an entity from a relation that can be associated with the relation
+                                eg - student can take any number of classes, a class is taken by any number of students
+                                1:1 - student can take 1 class and class be taken by 1 student
+                                1:N - student can take 1 class and class be taken by many students
+                                N:M - student can take any number of classes, a class is taken by any number of students
+
+    Weak Entity - entity that cannot be uniquely identified by its attributes alone eg exam cannot exist without class entity
+    Identifying Relationships - A relationship that serves to uniquely identify weak entities eg exam relationship with class
+
+- Example:
+
+    We have to design a database solution for a school
